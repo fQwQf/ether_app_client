@@ -1,0 +1,80 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页,
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true,
+				"app-plus":{
+					"titleNView":{
+						"buttons":[{
+                                "text": "\ue64f",
+								"fontSrc": "/static/iconfont.ttf",
+                                "fontSize":"25",
+                                "float": "left",
+                                "color":"#fff"
+                            }]
+					}
+				}
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		}, {
+			"path": "pages/reg/reg",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/pwd/pwd",
+			"style": {
+				"navigationBarTitleText": "找回密码"
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}, {
+			"path": "pages/leave_word/leave_word",
+			"style": {
+				"navigationBarTitleText": "留言"
+				}
+		},{
+			"path": "pages/options/options",
+			"style": {
+				"navigationBarTitleText": "选项"
+				}
+		},{
+			"path": "pages/log/update_log",
+			"style": {
+				"navigationBarTitleText": "更新日志"
+				}
+		}
+	],
+	"tabBar": {
+		"color": "#7a7e83",
+		"selectedColor": "#0faeff",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/main/main",
+			"text": "首页",
+			"iconPath": "static/img/home.png",
+			"selectedIconPath": "static/img/homeHL.png"
+		}, {
+			"pagePath": "pages/user/user",
+			"text": "我的",
+			"iconPath": "static/img/user.png",
+			"selectedIconPath": "static/img/userHL.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarBackgroundColor": "#0faeff",
+		"backgroundColor": "#fbf9fe",
+		"type": "transparent"
+
+	}
+}
