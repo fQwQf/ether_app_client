@@ -1,4 +1,7 @@
-{
+{ 
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
 	"pages": [ //pages数组中第一项表示应用启动页,
 		{
 			"path": "pages/main/main",
@@ -52,7 +55,27 @@
 			"style": {
 				"navigationBarTitleText": "更新日志"
 				}
-		}
+		},{
+			"path": "pages/friend/request_add_friend_list",
+			"style": {
+				"navigationBarTitleText": "好友"
+				}
+		},{
+			"path": "pages/uni-center",
+			"style": {
+				"navigationBarTitleText": "测试"
+				}
+		},{
+			"path": "pages/search/search_users",
+			"style": {
+				"navigationBarTitleText": "测试"
+				}
+		},{
+			"path": "pages/friend/friends_list",
+			"style": {
+				"navigationBarTitleText": "测试"
+				}
+			}
 	],
 	"tabBar": {
 		"color": "#7a7e83",

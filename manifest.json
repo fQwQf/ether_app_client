@@ -2,8 +2,8 @@
     "name" : "以太",
     "appid" : "__UNI__1005B08",
     "description" : "无",
-    "versionName" : "1.1",
-    "versionCode" : 300,
+    "versionName" : "1.2.beta1",
+    "versionCode" : 457,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {

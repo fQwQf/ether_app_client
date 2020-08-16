@@ -5,7 +5,8 @@ import store from './store'
 
 import cuCustom from './colorui/components/cu-custom.vue'
 
-
+import uView from 'uview-ui';
+Vue.use(uView);
 Vue.component('cu-custom',cuCustom)
 
 Vue.config.productionTip = false
