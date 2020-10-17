@@ -66,6 +66,13 @@
 				this.search(value)
 			},
 			search(value) {
+				if(!value){
+					this.$refs.uToast.show({
+						title: '请输入内容',
+						type: 'warning'
+					})
+					return
+				}
 				uni.request({
 					url: 'http://ether.gq:90/search_users.php',
 					data: {
@@ -74,29 +81,7 @@
 					method:'GET',
 					success: res => {
 						
-						var fuck=res.data.trim().split(' ');
-						uni.request({
-							url: 'http://ether.gq:90/show_friends_list.php',
-							data: {
-								username: this.userName
-								},
-							method:'GET',
-							success: res => {
-								res.data['friends']
-								for (var b in res.data['friends']){
-									console.log(res.data['friends'][b])
-									fuck.remove(res.data['friends'][b])
-									
-								}
-								fuck.remove(this.userName)
-								
-								this.$data.usernames=fuck
-								if (!fuck[0]){
-									this.$data.usernames=false
-								}
-							}
-						});
-						
+						this.$data.usernames=res.data['usernames']
 					},
 					fail:res => {
 						console.log('jjj')

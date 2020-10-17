@@ -48,6 +48,7 @@
 		mapState,
 		mapMutations
 	} from 'vuex'
+	import io from 'common/weapp.socket.io.js'
 	
 	export default {
 		data(){
@@ -63,6 +64,8 @@
 		onNavigationBarButtonTap() {console.log("点击了自定义按钮");      } ,
 		onLoad (){
 			this.showLeaveWord(this.$data.leave_word_number);
+			this.socket.emit('setRoom',{"roomId":this.userName}) ;
+
 		},
 		onPullDownRefresh() {
 			this.$data.leave_word_number = 0;

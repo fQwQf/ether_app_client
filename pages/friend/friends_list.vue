@@ -3,7 +3,7 @@
 		<view class="cu-list menu-avatar">
 			<view class="cu-item" :class="modalName=='move-box-'+ index?'move-cur':''" v-for="(username,index) in list['friends']" :key="index"
 			 @touchstart="ListTouchStart" @touchmove="ListTouchMove" @touchend="ListTouchEnd" :data-target="'move-box-' + index">
-				<view class="content">
+				<view class="content" @click="chat(username)">
 					<view class="text-grey">{{username}}</view>
 				</view>
 				<view class="move">
@@ -101,6 +101,11 @@
 					
 				});
 			},
+			chat(username){
+				uni.navigateTo({
+				    url: './chat?username='+username
+				});
+			}
 		}
 	};
 </script>
