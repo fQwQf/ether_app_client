@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view class="cont">
 		<view class="input-group">
 			<view class="input-row border">
 				<text class="title">账号：</text>
@@ -100,7 +100,7 @@
 					return;
 				}
 			uni.request({
-				url: 'http://ether.gq/sign_in.php',
+				url: 'http://ether.gq:90/sign_in.php',
 				data: {
 					username: this.account,
 					password: this.password
