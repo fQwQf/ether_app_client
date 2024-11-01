@@ -1,12 +1,9 @@
 <template>
-	<view class="content">
-		<view class="input-group">
-			<view class="input-row">
-				<text class="title" >内容：</text>
-				<textarea v-model="text" auto-height="true" maxlength="-1" style=" padding: 8px;width: 80%;"></textarea>
-			</view>
+	<view class="cont">
+		<view id="text" class="cu-form-group align-start">
+			<view class="title">内容：</view>
+			<textarea v-model="text" maxlength="-1" :disabled="modalName!=null" @input="textareaBInput" placeholder=""></textarea>
 		</view>
-		<p>{{fuck}}</p>
 		<view class="btn-row">
 			<button type="primary" class="primary" @tap="leaveWord">确定</button>
 		</view>
@@ -26,11 +23,11 @@
 			mInput
 		},
 		data() {
-			return{
-				email: ''
+		return{
+			
 			}
 		},
-		computed: mapState(['hasLogin', 'userName']),
+		computed: mapState(['userName']),
 		methods: {
 			leaveWord() {
 				if (!this.text) {
@@ -42,7 +39,7 @@
 				};
 				
 				uni.request({
-					url: 'http://ether.gq/leave_word.php',
+					url: 'http://ether.gq:90/leave_word.php',
 					data: {
 						username: this.userName,
 						text: this.text
@@ -66,5 +63,6 @@
 </script>
 
 <style>
-
+	@import "../../colorui/main.css";
+	@import "../../colorui/icon.css";
 </style>

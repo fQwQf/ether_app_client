@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view class="cont">
 		<view class="input-group">
 			<view class="input-row border">
 				<text class="title">账号：</text>
@@ -66,7 +66,7 @@
 				}
 				
 				uni.request({
-					url: 'http://ether.gq/sign_up.php',
+					url: 'http://ether.gq:90/sign_up.php',
 					data: data,
 					method:'GET',
 					success: res => {
@@ -76,6 +76,9 @@
 								title: '注册成功',
 								duration: 3000
 								});
+							uni.navigateBack({
+								delta: 1
+							});
 						}else{
 							uni.showToast({
 								icon: 'none',
@@ -93,9 +96,7 @@
 					}
 					});
 				
-				uni.navigateBack({
-					delta: 1
-				});
+				
 			}
 		}
 	}
